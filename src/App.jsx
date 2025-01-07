@@ -1,17 +1,16 @@
 import { useState } from "react";
 
 import "./App.css";
-import RecipeCard from "./Components/RecipeCard";
-import AllRecipes from "./Components/AllRecipes";
-import { Link, Outlet } from "react-router";
+
+import { Outlet } from "react-router";
+import Header from "./Components/Header";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <Link to="/AllRecipes">app</Link>
-
+      <Header />
       <Outlet />
     </>
   );

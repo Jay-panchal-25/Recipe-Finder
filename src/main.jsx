@@ -10,12 +10,14 @@ import {
 } from "react-router";
 import AllRecipes from "./Components/AllRecipes";
 import RecipePage from "./Components/RecipePage";
+import Favorites from "./Components/Favorites";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/AllRecipes" element={<AllRecipes />} />
       <Route path="/RecipePage" element={<RecipePage />} />
+      <Route path="/Favorites" element={<Favorites />} />
     </Route>
   )
 );
