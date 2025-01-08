@@ -9,16 +9,18 @@ function RecipeCard({ recipe }) {
   };
 
   return (
-    <div className="max-w-sm mx-auto bg-slate-500 rounded-lg shadow-lg overflow-hidden p-4 ">
+    <div className="max-w-sm mx-auto bg-white rounded-lg shadow-lg overflow-hidden p-4 hover:shadow-xl transition-shadow">
       <img
-        className="w-full h-56 object-cover"
+        className="w-full h-56 object-cover rounded-t-lg"
         src={recipe.image}
         alt={recipe.name}
       />
-      <div>Name:- {recipe.name}</div>
-      <div> {recipe.rating}</div>
+      <div className="mt-4 text-lg font-semibold text-gray-800">
+        {recipe.name}
+      </div>
+      <div className="text-gray-600 mt-2">Rating: {recipe.rating}</div>
       <button
-        className="bg-yellow-400 p-3 rounded-lg border-red-800  border-4"
+        className="mt-4 bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition-colors"
         onClick={() => readMore(recipe)}
       >
         Read more
