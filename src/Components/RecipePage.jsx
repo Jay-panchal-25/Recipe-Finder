@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router";
-
+import { FaHeart } from "react-icons/fa";
 function RecipePage() {
   const location = useLocation();
   const { recipe } = location.state || {}; // Retrieve passed state
@@ -12,6 +12,10 @@ function RecipePage() {
       </div>
     );
   }
+
+  const addToFav = (recipe) => {
+    alert("Recipe added to Favorites!");
+  };
 
   return (
     <div className="min-h-screen bg-gray-100 py-10">
@@ -30,6 +34,8 @@ function RecipePage() {
           </div>
 
           <div className="flex flex-col space-y-4">
+            <FaHeart onClick={() => addToFav(recipe)} />
+
             <h1 className="text-3xl font-semibold text-gray-800">
               {recipe.name}
             </h1>
